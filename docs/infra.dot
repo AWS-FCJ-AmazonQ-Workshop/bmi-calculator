@@ -1,0 +1,14 @@
+digraph INFRA {
+  node [ color = "black", fillcolor = "#E6E6E6", height =1, style = "filled,bold,rounded", fontname = "Arial" ];
+  "BmiCalculatorFunction" [ label = "BmiCalculatorFunction
+(AWS::Lambda::Function)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "BmiCalculatorFunctionServiceRole53EFEE9C" [ label = "BmiCalculatorFunctionServiceRole53EFEE9C
+(AWS::IAM::Role)", shape =rectangle ];
+  "BmiCalculatorFunctionLogGroup84425627" [ label = "BmiCalculatorFunctionLogGroup84425627
+(AWS::Logs::LogGroup)", shape =rectangle ];
+  "BmiCalculatorFunctionFunctionUrl68DA8F90" [ label = "BmiCalculatorFunctionFunctionUrl68DA8F90
+(AWS::Lambda::Url)", shape =rectangle, fillcolor = "#E78F81" ];
+  "BmiCalculatorFunction" -> "BmiCalculatorFunctionServiceRole53EFEE9C";
+  "BmiCalculatorFunctionLogGroup84425627" -> "BmiCalculatorFunction";
+  "BmiCalculatorFunctionFunctionUrl68DA8F90" -> "BmiCalculatorFunction";
+}
